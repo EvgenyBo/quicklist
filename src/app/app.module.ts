@@ -5,25 +5,22 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicStorageModule } from '@ionic/storage';
 import { Keyboard } from '@ionic-native/keyboard';
-
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-//import { IntroPage } from '../pages/intro/intro';
 import { DataProvider } from '../providers/data/data';
+import {HomePageModule} from "../pages/home/home.module";
 
 @NgModule({
   declarations: [
-    HomePage,
     MyApp,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    HomePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    HomePage,
     MyApp
   ],
   providers: [

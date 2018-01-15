@@ -37,10 +37,7 @@ export class ChecklistPage {
   }
 
   toggleItem(item): void {
-    this.checklist.toggleItem(item);
   }
-
-
   removeItem(item): void {
     this.checklist.removeItem(item);
   }
@@ -70,10 +67,5 @@ export class ChecklistPage {
   }
 
   uncheckItems(): void {
-    this.checklist.items.forEach((item) => {
-      if(item.checked){
-        this.checklist.toggleItem(item);
-      }
-    });
   }
 }
